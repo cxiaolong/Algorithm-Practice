@@ -22,3 +22,4 @@ class Solution2:
                     p = p.next
                     q = q.next
                 return p
+        return None

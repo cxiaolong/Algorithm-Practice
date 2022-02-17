@@ -30,6 +30,9 @@ class Solution2:
         cur_a = headA
         cur_b = headB
 
+        # 假设headA节点数为a，headB节点数为b，公共节点数为c
+        # cur1走完一遍headA，第二遍从HeadB走到第一个公共节点的长度为a+(b-c)，同理cur2走了b+(a-c)，cur1与cur2相遇了
+        # 当不存在公共节点时，c=0，cur1走到了headB尾节点的next(None)，cur2走到了headA尾节点的next(None)
         while cur_a != cur_b:
             cur_a = cur_a.next if cur_a else headB
             cur_b = cur_b.next if cur_b else headA

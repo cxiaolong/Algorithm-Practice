@@ -1,6 +1,7 @@
 from typing import List
 
 
+# 方法1-暴力解法
 class Solution1:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
@@ -11,6 +12,7 @@ class Solution1:
         return []
 
 
+# 方法2-哈希表
 class Solution2:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         hashtable = dict()

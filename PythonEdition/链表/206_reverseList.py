@@ -38,9 +38,15 @@ class Solution2:
 
 
 # 方法3-递归法：
+class Solution3:
+    def reverseList(self, head: ListNode) -> ListNode:
+        if head is None or head.next is None:
+            return head
+        p = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
 
-
-
+        return p
 
 
 if __name__ == '__main__':
